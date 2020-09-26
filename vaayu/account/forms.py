@@ -6,8 +6,16 @@ class CreateUser(forms.Form):
     email = forms.EmailField()
     phone = forms.IntegerField()
     password = forms.CharField()
-    password2 = forms.CharField()
-    Address = forms.CharField()
+    Address = forms.TextField()
+    country = forms.CharField()
+    pincode = forms.IntegerField()
 
 class NgoUser(forms.Form):
-    pass
+    ngo_name = forms.CharField()
+    ngo_email = forms.EmailField()
+    ngo_phone = forms.IntegerField()
+    ngo_pass = forms.CharField()
+    Address = forms.TextField()
+    Country = forms.CharField()
+    pincode = forms.IntegerField()
+    weblink = forms.URLField()
