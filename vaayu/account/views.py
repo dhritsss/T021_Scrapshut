@@ -1,9 +1,10 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
-from django.contrib.auth.models import auth
-
-from .forms import CreateUser,NgoUser
+from django.contrib.auth.models import auth,User
+from .forms import *
 from .models import *
+
+
 
 # Create your views here.
 def index(request):
@@ -12,12 +13,28 @@ def index(request):
 def RegisterAsUser(request):
 
     if request.method == 'POST':
-        fname = request.POST['first_name']
-        lname = request.POST['last_name']
-        password1 = request.POST['password1']
-        password2 = request.POST['password2']
+        user_form = UserForm(request.POST, instance=request.user)
+        donar_form = DonarForm(request.POST, instance=request.user.profile)
+        if user_form.is_valid() and donar_form.is_valid():
+            user_form.save()
+            donar_form.save()
+            messages.success(request, ('Your profile was successfully updated!'))
+            return redirect('LoginAsUser')
+        else:
+            messages.error(request, ('Please correct the error below.'))
+            return render('RegisterAsUser')
+    else:
+        user_form = UserForm(instance=request.user)
+        donar_form = DonarForm(instance=request.user.profile)
+    return render(request, 'register-donar.html', {'user_form': user_form,'donar_form': donar_form})
+"""    if request.method == 'POST':
+        fname = request.POST['fname']
+        lname = request.POST['lname']
+
         email = request.POST['email']
         phone = request.POST['phone']
+        password1 = request.POST['password1']
+        password2 = request.POST['password2']
         Address = request.POST['address']
         country = request.POST['country']
         pincode = request.POST['pincode']
@@ -27,7 +44,7 @@ def RegisterAsUser(request):
                 messages.info(request, "Enter another email-id !!")
                 return redirect("RegisterAsUser")
             else:
-                user_view = user.objects.create_user(fname=fname, lname=lname, email=email, phone=phone,
+                user_view = user.objects.c(fname=fname, lname=lname, email=email, phone=phone,
                                                      password=password1, Address=Address, country=country,
                                                      pincode=pincode)
                 user_view.save()
@@ -38,8 +55,24 @@ def RegisterAsUser(request):
             return redirect('RegisterAsUser')
     else:
         return render(request, "register-donor.html")
-
+"""
 def RegisterAsNgo(request):
+    if request.method == 'POST':
+        user_form = UserForm(request.POST, instance=request.user)
+        ngo_form = NGOForm(request.POST, instance=request.user.profile)
+        if user_form.is_valid() and ngo_form.is_valid():
+            user_form.save()
+            ngo_form.save()
+            messages.success(request, ('Your profile was successfully updated!'))
+            return redirect('LoginAsNgo')
+        else:
+            messages.error(request, ('Please correct the error below.'))
+            return render('RegisterAsNgo')
+    else:
+        user_form = UserForm(instance=request.user)
+        ngo_form = NGOForm(instance=request.user.profile)
+    return render(request, 'register-ngo.html', {'user_form': user_form,'ngo_form': ngo_form})
+"""
     if request.method == 'POST':
         ngo_name = request.POST['first_name']
         password1 = request.POST['password1']
@@ -57,7 +90,7 @@ def RegisterAsNgo(request):
                 return redirect("RegisterAsNgo")
             else:
                 ngo_view = ngo.objects.create_user(ngo_name=ngo_name,ngo_email=ngo_email,ngo_phone=ngo_phone,ngo_pass=password1, ngo_address= ngo_address, ngo_country=ngo_country,ngo_pincode=ngo_pincode,weblink = weblink)
-                user_view.save()
+                ngo_view.save()
                 messages.info(request, "ngo account created")
                 return redirect('LoginAsNgo')
         else:
@@ -68,7 +101,7 @@ def RegisterAsNgo(request):
     else:
         return render(request, "register-ngo.html")
 
-
+"""
 def LoginAsUser(request):
     if request.method == 'POST':
         email = request.POST['email']

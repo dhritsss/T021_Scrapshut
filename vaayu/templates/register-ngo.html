@@ -16,7 +16,11 @@
 		<div class="form" >
 			
       
-			<form class="reg-form" >
+			<form class="reg-form" action = "RegisterAsNgo" method="post">
+				{% csrf_token %}
+				{{user_form.as_p}}
+				{{ngo_form.as_p}}
+				<!--
 				<input type="text" name="fullName" size="40" maxlength="38" pattern="^[a-zA-Z]'?[-'a-zA-Z]+$" placeholder="Full Name" required>
 				<input type="email" name="email" size="50" maxlength="256" placeholder="Your contact e-mail" required/>
 				<input type="text" name="username"  placeholder="Choose username" required>
@@ -34,9 +38,9 @@
 				<input type="password" name="password" minlength="6" maxlength="32" placeholder="Password" required>
 				<input type="password" name="password" placeholder="Confirm password" required/>
 				<input type="text" name="Address" maxlength="500" minlength="1" placeholder="Address" required>
-				<input type="option" name="type" maxlength="5" minlength="3" placeholder="Donor/NGO" required> 
+				<input type="option" name="type" maxlength="5" minlength="3" placeholder="Donor/NGO" required>
+				-->
 				<button type="submit">create</button>
-
 				<p>Already registered? <a href="LoginAsNgo" >Login</a></p>
 			</form>
 		</div>
