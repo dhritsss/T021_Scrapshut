@@ -19,15 +19,17 @@ class ngo(models.Model):
     ngo_email = models.EmailField(null = False,blank=False,unique=True)
     ngo_phone = models.IntegerField(null = False, blank=False,unique= True)
     ngo_pass = models.CharField(null = False,max_length=25)
-    Address = models.TextField(max_length=300)
-    Country = models.CharField(null = False,max_length=50)
-    pincode = models.IntegerField(null =False)
+    ngo_address = models.TextField(max_length=300)
+    ngo_country = models.CharField(null = False,max_length=50)
+    ngo_pincode = models.IntegerField(null =False)
     weblink = models.URLField()
 
 class Equipments(models.Model):
     eqi_id = models.AutoField
     eqi_name = models.CharField(max_length=200)
     Price = models.FloatField()
+    def __str__(self):
+        return self.eqi_name
 
 class Requirements(models.Model):
     ngo_id = models.ForeignKey(ngo,on_delete=models.CASCADE)
