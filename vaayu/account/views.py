@@ -14,5 +14,6 @@ def RegisterAsNgo(request):
 def LoginAsUser(request):
     return render(request,"login.html")
 
+
 def LoginAsNgo(request):
     return render(request,"login-ngo.html")
