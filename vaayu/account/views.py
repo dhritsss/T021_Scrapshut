@@ -1,20 +1,16 @@
-<<<<<<< HEAD
 from django.shortcuts import render,redirect
-from . models import *
 from django.contrib import messages
 from django.contrib.auth.models import auth
 
-=======
-from django.shortcuts import render
 from .forms import CreateUser,NgoUser
 from .models import *
->>>>>>> 40863d9128ad2a553ff540cf43a501a9e96fc179
+
 # Create your views here.
 def index(request):
     return render(request,"index.html")
 
 def RegisterAsUser(request):
-<<<<<<< HEAD
+
     if request.method == 'POST':
         fname = request.POST['first_name']
         lname = request.POST['last_name']
@@ -42,14 +38,6 @@ def RegisterAsUser(request):
             return redirect('RegisterAsUser')
     else:
         return render(request, "register-donor.html")
-
-=======
-
-
-
-
-    return render(request,"register-donor.html")
->>>>>>> 40863d9128ad2a553ff540cf43a501a9e96fc179
 
 def RegisterAsNgo(request):
     if request.method == 'POST':
@@ -82,7 +70,7 @@ def RegisterAsNgo(request):
 
 
 def LoginAsUser(request):
-    if request.method = 'POST':
+    if request.method == 'POST':
         email = request.POST['email']
         password = request.POST['password']
 
@@ -100,7 +88,7 @@ def LoginAsUser(request):
 
 
 def LoginAsNgo(request):
-    if request.method = 'POST':
+    if request.method == "POST":
         ngo_email = request.POST['ngo_email']
         ngo_pass = request.POST['ngo_pass']
 
@@ -119,7 +107,7 @@ def RegisterAsUserSuccess(request):
     pass
 
 def UserDonation(request):
-    pass
+    return render(request,"index5.html")
 
 def NgoRequirement(request):
-    pass
+    return render(request,"homepagelogin.html")

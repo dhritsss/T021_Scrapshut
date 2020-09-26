@@ -26,8 +26,3 @@ class NgoUser(forms.Form):
     Country = forms.CharField(max_length=50)
     pincode = forms.IntegerField()
     weblink = forms.URLField()
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 40863d9128ad2a553ff540cf43a501a9e96fc179
