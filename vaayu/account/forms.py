@@ -20,3 +20,7 @@ class NgoUser(forms.Form):
     pincode = forms.IntegerField()
     weblink = forms.URLField()
 
+<<<<<<< HEAD
+=======
+class
+>>>>>>> 487ca19e8c20a87f1d8d8636f89e8bca7d7c3e2e
