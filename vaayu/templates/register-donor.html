@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <!--  Meta  -->
+  <meta charset="UTF-8" />
+  <title>Sign Up for donor</title>
+  
+  <!--  Styles  -->
+  <link rel="stylesheet" href="{% static 'css/account.css' %}">
+  <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+</head>
+<body>
+  <div class="login-page" >
+		<div class="form" >
+		
+      
+			<form class="reg-form" >
+				<input type="text" name="fullName" size="40" maxlength="38" pattern="^[a-zA-Z]'?[-'a-zA-Z]+$" placeholder="Full Name" required>
+				<input type="email" name="email" size="50" maxlength="256" placeholder="Your contact e-mail" required/>
+				<input type="text" name="username"  placeholder="Choose username" required>
+				<input list="region" placeholder ="Region" required>
+					<datalist id="region">
+						<option value="Africa">
+						<option value="Antarctica">
+						<option value="Asia">
+						<option value="Australia">
+     <option value="Europe">
+     <option value="North America">
+     <option value="South America">
+					</datalist>
+				
+				<input type="password" name="password" minlength="6" maxlength="32" placeholder="Password" required>
+				<input type="password" name="password" placeholder="Confirm password" required/>
+				<input type="textarea" name="Address" maxlength="500" minlength="1" placeholder="Address" required>
+				<input type="option" name="type" maxlength="5" minlength="3" placeholder="Donor/NGO" required> 
+				<button type="submit">create</button>
+
+				<p>Already registered? <a href="LoginAsUser" >Login</a></p>
+			</form>
+		</div>
+  </div>
+ <!-- <div class="loader"></div>-->
+	
+		
+         <!--script-->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+			<script type="text/javascript">
+				$('p a').click(function(){
+					$('form').animate({height: "toggle", opacity:"toggle"}, "slow");
+				});
+   //Still working  on this part
+  /*  $('button').click(function(){    $('.loafter,  form').animate({height:"toggle", opacity:"toggle"}, "slow");
+    });*/
+			</script>
+	</body>
+</html>
