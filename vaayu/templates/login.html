@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Login Page for Donors</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="account.css">
+	<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/account.css' %}">
 </head>
 <body>
      <div class="login-page">
@@ -17,7 +18,7 @@
   <input type="checkbox">
   <span class="checkmark"></span>
       </label>  
-				<p>Not registered?  <a href="#">Create account</a></p>
+				<p>Not registered?  <a href="RegisterAsUser">Create account</a></p>
 				<p>Forgot Password?  <a href="#" target="_blank">Click here</a></p>
 </form>
      		

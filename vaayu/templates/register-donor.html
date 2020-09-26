@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +8,8 @@
   <title>Sign Up for donor</title>
   
   <!--  Styles  -->
-  <link rel="stylesheet" href="account.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{% static 'css/account.css' %}">
+  <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
 </head>
 <body>
   <div class="login-page" >
@@ -36,7 +37,7 @@
 				<input type="option" name="type" maxlength="5" minlength="3" placeholder="Donor/NGO" required> 
 				<button type="submit">create</button>
 
-				<p>Already registered? <a href="#" >Login</a></p>
+				<p>Already registered? <a href="LoginAsUser" >Login</a></p>
 			</form>
 		</div>
   </div>
