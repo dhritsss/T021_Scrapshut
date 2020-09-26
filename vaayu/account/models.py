@@ -8,7 +8,7 @@ class user(models.Model):
     lname = models.CharField(max_length=30,null=False)
     email = models.EmailField(null = False ,blank=False, unique=True)
     phone = models.IntegerField(null = False , blank=False, unique= True)
-    password = models.CharField(null = False,max_length=25)
+    password1 = models.CharField(null = False,max_length=25)
     Address = models.TextField(max_length=300)
     country = models.CharField(null = False,max_length=50)
     pincode = models.IntegerField(null = False)

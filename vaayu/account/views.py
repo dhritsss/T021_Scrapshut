@@ -1,13 +1,20 @@
+<<<<<<< HEAD
 from django.shortcuts import render,redirect
 from . models import *
 from django.contrib import messages
 from django.contrib.auth.models import auth
 
+=======
+from django.shortcuts import render
+from .forms import CreateUser,NgoUser
+from .models import *
+>>>>>>> 40863d9128ad2a553ff540cf43a501a9e96fc179
 # Create your views here.
 def index(request):
     return render(request,"index.html")
 
 def RegisterAsUser(request):
+<<<<<<< HEAD
     if request.method == 'POST':
         fname = request.POST['first_name']
         lname = request.POST['last_name']
@@ -36,6 +43,13 @@ def RegisterAsUser(request):
     else:
         return render(request, "register-donor.html")
 
+=======
+
+
+
+
+    return render(request,"register-donor.html")
+>>>>>>> 40863d9128ad2a553ff540cf43a501a9e96fc179
 
 def RegisterAsNgo(request):
     if request.method == 'POST':
@@ -82,6 +96,7 @@ def LoginAsUser(request):
             return redirect('LoginAsUser')
     else:
         return render(request,"login.html")
+
 
 
 def LoginAsNgo(request):
