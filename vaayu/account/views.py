@@ -6,21 +6,6 @@ def index(request):
     return render(request,"index.html")
 
 def RegisterAsUser(request):
-    form = CreateUser()
-    if request.method == 'POST':
-        form = CreateUser(request.post)
-        if form.is_valid():
-            user_form = user(
-                fname = form.cleaned_data['fname'],
-                lname = form.cleaned_data['lname'],
-                email = form.cleaned_data['email'],
-                phone = form.cleaned_data['phone'],
-                password1 = form.cleaned_data['password1'],
-                password2 = form.cleaned_data['password2'],
-                Address = form.cleaned_data['address'],
-                country = form.cleaned_data['country'],
-                pincode = form.cleaned_data['pincode'],
-            )
 
 
 
