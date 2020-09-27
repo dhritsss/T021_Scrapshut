@@ -144,3 +144,6 @@ def UserDonation(request):
 
 def NgoRequirement(request):
     return render(request,"homepagelogin.html")
+
+def about(request):
+    return render(request,"about.html")
