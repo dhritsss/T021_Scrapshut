@@ -1,0 +1,162 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>NGO</title>
+        
+    </head>
+    <body >
+        
+        <h1>About</h1>
+        <section style="display: flex;"  class="about">
+            <img src="{% static './Images/about-2.jpg' %}" alt="" style="width: 400px;">
+            <div>
+                <span><b> AN INTRODUCTION</b></span><br>
+                <p>Vaayu is one of India’s largest independent and youth volunteer non-profit organisations.
+                </p>
+                <p>Vaayu was founded on August 15, 2006 by a small group of friends with a strong passion to change society today and build a better India for tomorrow.</p> 
+                <p>The organisation provides youngsters a platform to serve the society and bridges the gap between the educated and the uneducated.</p>
+
+                <p>Our volunteers educate and mentor children from orphanages, slum and village community centres across the country to give them a better future, which will benefit them as well as our country.</p> 
+                <p>The learning experience is mutual – our volunteers gain perspective and the experience to mould themselves into tomorrow’s leaders.
+                    </p>
+            </div>
+            <style>
+                
+                .about{
+                    background-color: #F2F2F2;
+                    padding: 2rem 2rem 2rem 2rem;
+                }
+                h1{
+                    color:#898989;
+                    padding-top: 1rem;
+                    padding-left: 2rem;
+                    padding-bottom: 1rem;
+                    font-size: 4rem;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-weight: 500;
+                    background-color: #F2F2F2 ;
+                }
+                span{
+                    color:#3DCFD3;
+                    padding-bottom: 2rem;
+                    font-size: 2rem;
+                }
+                .about p{
+                    line-height: 2.2rem;
+                }
+                .about div{
+                    padding-left: 2rem;
+                    font-family:  sans-serif;
+                    font-weight: 200;
+                    text-align: justify;
+                    line-height: 1.2;
+                    
+                }
+                *{
+                    padding: 0;
+                    margin: 0;
+                    box-sizing: border-box;
+                    -webkit-font-smoothing: antialiased;
+                 }
+                 .quote{
+                     background-color: #3DCFD3;
+                     padding: 1.5rem 1.5rem  1.5rem 1.5rem;
+                 }
+                 .quote p{
+                     color: white;
+                     font-size: 1.5rem;
+                 }
+                 .vision{
+                    padding: 2rem 2rem 2rem 2rem;
+                    background:white;
+                    padding-bottom: 5rem;
+                    padding-top: 5rem;
+                    display:grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-column-gap: 2rem;
+                    grid-row-gap: 6rem;
+                 }
+                 .vision img{
+                    width: 500px;
+                 }
+                 .vision h2{
+                     font-size: 2.5rem;
+                     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                     font-weight: 400;
+                     line-height: 6rem;
+                     text-align: center;
+                 }
+                 .vision h3{
+                    color: #3DCFD3;
+                    text-align: center;
+                    font-size: 1.5rem;
+                    line-height: 5rem ;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                 }
+                 .vision p{
+                     text-align: center;
+                     color: #898989;
+                     font-size: 1rem;
+                 }
+
+                 footer{
+                        background: #161616;
+                        text-align: center;
+                        padding: 5rem 0;
+                    }
+                footer .footer-logo{
+                        margin-bottom: 3rem;
+                        width: 150px;
+                    }
+                footer .footer-social a{
+                        margin-right: 1rem;
+                    }
+                footer .footer-social a img{
+                        border-radius: 3rem;
+                    }
+                footer .footer-social{
+                        margin-bottom: 3rem;
+                        margin-right: -1rem;
+                    }
+
+                footer .copyright{
+                        color: #898989;
+                    }
+                 
+            </style>
+        </section>
+        <section class="quote">
+            <p>``Never doubt that a small group of thoughtful, committed citizens can change the world. Indeed, it’s the only thing that ever has.”</p>
+            <p>– Margaret Mead</p>
+        </section>
+
+        <section class="vision">
+            <div>
+            <h2>VISION & MISSSION</h2>
+            <h3>Vision</h3>
+            <p>To create a healthy environment</p>
+            <h3>Mission</h3>
+            <p>To provide the equipments required to those in need.</p>
+            </div>
+            <img src="{% static './Images/Values.jpg' %}" alt="">
+        </section>
+
+        <footer>
+            <img class="footer-logo" src="{% static './Images/logo-2.svg' %}" alt="">
+            <div class="footer-social">
+                <a href="#"><img src="{% static './Images/website final 2.png' %}" width="32px" alt=""></a>
+                <a href="#"><img src="{% static './Images/facebook.jpg' %}" width="35px" alt=""></a>
+                <a href="#"><img src="{% static './Images/twitter.jpg' %}" width="35px" alt=""></a>
+                <a href="#"><img src="{% static './Images/pintrest.jpg' %}" width="35px" alt=""></a>
+                <a href="#"><img src="{% static './Images/Instagram final.jpg' %}" width="35" alt=""></a>
+            </div>
+            <div class="copyright">Copyright 2020  Vaayu  . All Copyright Reserved.</div>
+        </footer>
+
+        
+        
+    </body>
