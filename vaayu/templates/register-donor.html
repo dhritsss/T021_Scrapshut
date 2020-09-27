@@ -9,21 +9,20 @@
   
   <!--  Styles  -->
   <link rel="stylesheet" href="{% static 'css/account.css' %}">
-  <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-{% csrf_token %}
+
   <div class="login-page" >
 		<div class="form" >
-		
-      
 			<form class="reg-form" action="RegisterAsUser" method="post">
+				{% csrf_token %}
 				<input type="text" name="fname" size="40" maxlength="30" pattern="^[a-zA-Z]'?[-'a-zA-Z]+$" placeholder="First Name" required>
 				<input type="text" name="lname" size="40" maxlength="30" pattern="^[a-zA-Z]'?[-'a-zA-Z]+$" placeholder="Last Name" required>
 				<input type="email" name="email" size="50" placeholder="Your contact e-mail" required/>
 				<input type="number" min = "0" name="phone" placeholder="Contact Number" required>
 
-			<!--	<input list="region" placeholder ="Region" required>
+				<input list="region" placeholder ="Region" required>
 					<datalist id="region">
 						<option value="Africa">
 						<option value="Antarctica">
@@ -32,11 +31,11 @@
      <option value="Europe">
      <option value="North America">
      <option value="South America">
-					</datalist>-->
+					</datalist>
 				
-				<input type="password" name="password" minlength="6" maxlength="25" placeholder="Password" required>
-				<input type="password" name="password" placeholder="Confirm password" required/>
-				<input type="textarea" name="Address" maxlength="300" minlength="1" placeholder="Address" required>
+				<input type="password" name="password1" placeholder="Password" required>
+				<input type="password" name="password2" placeholder="Confirm password" required/>
+				<input type="textarea" name="address" maxlength="300" minlength="1" placeholder="Address" required>
 				<input type="text" name="country" maxlength="50" minlength="1" placeholder="country" required>
 				<input type="number" name="pincode" minlength="1" placeholder="pincode" required>
 				<button type="submit">create</button>

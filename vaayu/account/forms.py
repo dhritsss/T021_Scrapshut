@@ -1,28 +1,17 @@
 from django import forms
+from .models import *
 
-class CreateUser(forms.Form):
-    fname = forms.CharField(label='fname',max_length=30)
-    lname = forms.CharField(label='fname',max_length=30)
-    email = forms.EmailField()
-    phone = forms.IntegerField()
-    password1 = forms.CharField(max_length=25, widget=forms.PasswordInput)
-    password2 = forms.CharField(max_length=25, widget=forms.PasswordInput)
-    Address = forms.CharField(widget=forms.Textarea(),max_length=300)
-    country = forms.CharField(max_length=50)
-    pincode = forms.IntegerField()
-    def clean(self):
-        if self.password1 != self.password2:
-            raise forms.ValidationError(
-                "password and confirm_password does not match"
-            )
+class UserForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ('first_name', 'last_name', 'email','password')
 
-class NgoUser(forms.Form):
-    ngo_name = forms.CharField(max_length=50)
-    ngo_email = forms.EmailField()
-    ngo_phone = forms.IntegerField()
-    ngo_pass1 = forms.CharField(max_length=25,widget=forms.PasswordInput)
-    ngo_pass2 = forms.CharField(max_length=25, widget=forms.PasswordInput)
-    Address = forms.CharField(widget=forms.Textarea(),max_length=300)
-    Country = forms.CharField(max_length=50)
-    pincode = forms.IntegerField()
-    weblink = forms.URLField()
+class DonarForm(forms.ModelForm):
+    class Meta:
+        model = Donar
+        fields = '__all__'
+
+class NGOForm(forms.ModelForm):
+    class Meta:
+        model = NGO
+        fields = '__all__'
