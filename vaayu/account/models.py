@@ -12,7 +12,7 @@ class Donar(models.Model):
     Address = models.TextField(max_length=300,null=False)
     country = models.CharField(max_length=50,null=False)
     pincode = models.IntegerField()
-
+    print()
     @receiver(post_save, sender=User)
     def create_user_profile(sender, instance, created, **kwargs):
         if created:
