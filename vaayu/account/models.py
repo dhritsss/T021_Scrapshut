@@ -112,6 +112,7 @@ class Equipments(models.Model):
     eqi_id = models.AutoField
     eqi_name = models.CharField(max_length=200)
     Price = models.FloatField()
+    image = models.ImageField(default='')
     def __str__(self):
         return self.eqi_name
 
