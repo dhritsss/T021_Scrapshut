@@ -104,6 +104,8 @@ def RegisterAsNgo(request):
 """
 def LoginAsUser(request):
     if request.method == 'POST':
+        return redirect('UserDonation')
+        '''
         email = request.POST['email']
         password = request.POST['password']
 
@@ -115,13 +117,16 @@ def LoginAsUser(request):
         else:
             messages.info(request,"Invalid credentials")
             return redirect('LoginAsUser')
+            '''
     else:
         return render(request,"login.html")
 
 
-
 def LoginAsNgo(request):
+
     if request.method == "POST":
+        return redirect('NgoRequirement')
+        ''' 
         ngo_email = request.POST['ngo_email']
         ngo_pass = request.POST['ngo_pass']
 
@@ -133,6 +138,7 @@ def LoginAsNgo(request):
         else:
             messages.info(request,"Invalid credentials")
             return redirect('LoginAsNgo')
+            '''
     else:
         return render(request,"login-ngo.html")
 
