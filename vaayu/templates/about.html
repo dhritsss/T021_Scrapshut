@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,7 +12,7 @@
         
         <h1>About</h1>
         <section style="display: flex;"  class="about">
-            <img src="./Images/about-2.jpg" alt="" style="width: 400px;">
+            <img src="{% static './Images/about-2.jpg' %}" alt="" style="width: 400px;">
             <div>
                 <span><b> AN INTRODUCTION</b></span><br>
                 <p>Vaayu is one of India’s largest independent and youth volunteer non-profit organisations.
@@ -141,17 +142,17 @@
             <h3>Mission</h3>
             <p>To provide the equipments required to those in need.</p>
             </div>
-            <img src=".//Images/Values.jpg" alt="">
+            <img src="{% static './Images/Values.jpg' %}" alt="">
         </section>
 
         <footer>
-            <img class="footer-logo" src="./Images/logo-2.svg" alt="">
+            <img class="footer-logo" src="{% static './Images/logo-2.svg' %}" alt="">
             <div class="footer-social">
-                <a href="#"><img src="./Images/website final 2.png" width="32px" alt=""></a>
-                <a href="#"><img src="./Images/facebook.jpg" width="35px" alt=""></a>
-                <a href="#"><img src="./Images/twitter.jpg" width="35px" alt=""></a>
-                <a href="#"><img src="./Images/pintrest.jpg" width="35px" alt=""></a>
-                <a href="#"><img src="./Images/Instagram final.jpg" width="35" alt=""></a>
+                <a href="#"><img src="{% static './Images/website final 2.png' %}" width="32px" alt=""></a>
+                <a href="#"><img src="{% static './Images/facebook.jpg' %}" width="35px" alt=""></a>
+                <a href="#"><img src="{% static './Images/twitter.jpg' %}" width="35px" alt=""></a>
+                <a href="#"><img src="{% static './Images/pintrest.jpg' %}" width="35px" alt=""></a>
+                <a href="#"><img src="{% static './Images/Instagram final.jpg' %}" width="35" alt=""></a>
             </div>
             <div class="copyright">Copyright 2020  Vaayu  . All Copyright Reserved.</div>
         </footer>
