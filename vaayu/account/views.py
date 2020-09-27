@@ -11,7 +11,11 @@ def index(request):
     return render(request,"index.html")
 
 def RegisterAsUser(request):
-
+    if request.method == "POST":
+        return redirect('LoginAsUser')
+    else:
+        return render(request,"register-donor.html")
+'''   
     if request.method == 'POST':
         user_form = UserForm(request.POST, instance=request.user)
         donar_form = DonarForm(request.POST, instance=request.user.profile)
@@ -27,6 +31,7 @@ def RegisterAsUser(request):
         user_form = UserForm(instance=request.user)
         donar_form = DonarForm(instance=request.user.profile)
     return render(request, 'register-donar.html', {'user_form': user_form,'donar_form': donar_form})
+'''
 """    if request.method == 'POST':
         fname = request.POST['fname']
         lname = request.POST['lname']
@@ -58,6 +63,10 @@ def RegisterAsUser(request):
 """
 def RegisterAsNgo(request):
     if request.method == 'POST':
+        return redirect('LoginAsNgo')
+    else:
+        return render(request,"register-ngo.html")
+        '''
         user_form = UserForm(request.POST, instance=request.user)
         ngo_form = NGOForm(request.POST, instance=request.user.profile)
         if user_form.is_valid() and ngo_form.is_valid():
@@ -100,11 +109,13 @@ def RegisterAsNgo(request):
     # return redirect('/')
     else:
         return render(request, "register-ngo.html")
+    '''
 
-"""
 def LoginAsUser(request):
     if request.method == 'POST':
-        return redirect('UserDonation')
+        return redirect('RegisterAsUserSuccess')
+    else:
+        return render(request, "login.html")
         '''
         email = request.POST['email']
         password = request.POST['password']
@@ -118,14 +129,13 @@ def LoginAsUser(request):
             messages.info(request,"Invalid credentials")
             return redirect('LoginAsUser')
             '''
-    else:
-        return render(request,"login.html")
 
 
 def LoginAsNgo(request):
-
     if request.method == "POST":
-        return redirect('NgoRequirement')
+        return redirect('NgoHomepage')
+    else:
+        return render(request, "login-ngo.html")
         ''' 
         ngo_email = request.POST['ngo_email']
         ngo_pass = request.POST['ngo_pass']
@@ -139,17 +149,26 @@ def LoginAsNgo(request):
             messages.info(request,"Invalid credentials")
             return redirect('LoginAsNgo')
             '''
-    else:
-        return render(request,"login-ngo.html")
+
 
 def RegisterAsUserSuccess(request):
-    pass
+    return render(request,"userdonation.html")
 
 def UserDonation(request):
-    return render(request,"index5.html")
+    return render(request,"donated items.html")
 
-def NgoRequirement(request):
+def NgoHomePage(request):
     return render(request,"homepagelogin.html")
 
 def about(request):
     return render(request,"about.html")
+
+def NgoRequirement(request):
+    equipments = Equipments.objects.all()
+    equi_dict = {'Equipments': equipments}
+    return render(request,"request.html",equi_dict)
+
+def DonateUser(request):
+    equipments = Equipments.objects.all()
+    equi_dict = {'Equipments': equipments}
+    return render(request, "donation.html", equi_dict)

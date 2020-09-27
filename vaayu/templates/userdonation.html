@@ -1,17 +1,26 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>NGO Name</title>
-	<link rel="stylesheet" type="text/css" href="style5.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style5.css' %}">
+	<STYLE>A {text-decoration: none;} </STYLE>
+	<!--<style type="text/css">
+		button {
+		text-decoration : none;
+		}
+	</style>-->
 </head>
 <body>
+	<button class="btn btn-secondary"><a href = "index">Logout</a></button>
 	<h1>NGO Requirements</h1>
 	<ul>
 		<h2>Bhumi</h2>
 		<h3>Requirements</h3>
  		<li>Masks Needed:</li>
  		<li>Oximeter Needed:</li>
- 		<button class="btn btn-secondary">Donate</button>
+		<button class="btn btn-secondary"><a href = "DonateUser">Donate</a></button>
 		
 
 	</ul>
@@ -21,7 +30,7 @@
  		<li>Ventilator Needed:</li>
  		<li>Mask Needed:</li>
  		<li>Beds Needed:</li>
- 		<button class="btn btn-secondary">Donate</button>
+		<button class="btn btn-secondary"><a href = "DonateUser">Donate</a></button>
 		
 
 	</ul>
@@ -31,7 +40,7 @@
  		<li>Masks Needed:</li>
  		<li>Oximeter Needed:</li>
  		<li>Sanitizer Needed:</li>
- 		<button class="btn btn-secondary">Donate</button>
+		<button class="btn btn-secondary"><a href = "DonateUser">Donate</a></button>
 		
 
 	</ul>
@@ -41,7 +50,7 @@
  		<li>Masks Needed:</li>
  		<li>Ventilator Needed:</li>
  		<li>Sanitizer Needed:</li>
- 		<button class="btn btn-secondary">Donate</button>
+		<button class="btn btn-secondary"><a href = "DonateUser">Donate</a></button>
 		
 
 	</ul>
@@ -51,7 +60,7 @@
  		<li>Oximeter Needed:</li>
  		<li>Ventilator Needed:</li>
  		<li>Sanitizer Needed:</li>
- 		<button class="btn btn-secondary">Donate</button>
+		<button class="btn btn-secondary"><a href = "DonateUser">Donate</a></button>
 		
 
 	</ul>

@@ -9,19 +9,14 @@
   
   <!--  Styles  -->
   <link rel="stylesheet" href="{% static 'css/account.css' %}">
-  <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
   <div class="login-page" >
 		<div class="form" >
-		
-      
 			<form class="reg-form" action="RegisterAsUser" method="post">
 				{% csrf_token %}
-				{{user_form.as_p}}
-				{{donar_form.as_p}}
-				<!--
 				<input type="text" name="fname" size="40" maxlength="30" pattern="^[a-zA-Z]'?[-'a-zA-Z]+$" placeholder="First Name" required>
 				<input type="text" name="lname" size="40" maxlength="30" pattern="^[a-zA-Z]'?[-'a-zA-Z]+$" placeholder="Last Name" required>
 				<input type="email" name="email" size="50" placeholder="Your contact e-mail" required/>
@@ -43,7 +38,6 @@
 				<input type="textarea" name="address" maxlength="300" minlength="1" placeholder="Address" required>
 				<input type="text" name="country" maxlength="50" minlength="1" placeholder="country" required>
 				<input type="number" name="pincode" minlength="1" placeholder="pincode" required>
-				-->
 				<button type="submit">create</button>
 
 				<p>Already registered? <a href="LoginAsUser" >Login</a></p>
