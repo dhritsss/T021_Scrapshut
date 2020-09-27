@@ -13,6 +13,7 @@ class Donar(models.Model):
     country = models.CharField(max_length=50,null=False)
     pincode = models.IntegerField()
     print()
+    """
     @receiver(post_save, sender=User)
     def create_user_profile(sender, instance, created, **kwargs):
         if created:
@@ -20,14 +21,15 @@ class Donar(models.Model):
 
     @receiver(post_save, sender=User)
     def save_user_profile(sender, instance, **kwargs):
-        instance.donar.save()
+        instancesave()
+    """
 class NGO(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE,default="")
     ngo_Address = models.TextField(max_length=300,null=False)
     country = models.CharField(max_length=50,null= False)
     pincode = models.IntegerField()
     weblink = models.URLField()
-
+    """
     @receiver(post_save, sender=User)
     def create_user_profile(sender, instance, created, **kwargs):
         if created:
@@ -36,10 +38,9 @@ class NGO(models.Model):
     @receiver(post_save, sender=User)
     def save_user_profile(sender, instance, **kwargs):
         instance.profile.save()
-
 """
 # Create your models here.
-
+"""
 class MyUserManager(BaseUserManager):
     def create_user(self, email, password=None, **kwargs):
         if not email:
