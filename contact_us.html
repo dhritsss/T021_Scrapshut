@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Us Form</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="contact us form using Html5,CSS3">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Richa Shah">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ddb5b3cf32.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Contact Us form/css/contact_us.css">
+</head>
+<body>
+    
+<section class="contact">
+    <div class="content">
+        <h2>Contact Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+    </div>
+    <div class="container_box">
+        <div class="contactInfo">
+            <div class="box">
+                <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                <div class="text">
+                    <h3>Address</h3>
+                    <p>
+                        Calista Wise,<br>
+                        4671 Sugar Camp Road,<br>
+                        San Antonio MI,<br>
+                        47096
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><a class="contactLink icon_link" href="mailto:richashah962@gmail.com" title="Email me"><i class="fa fa-envelope" aria-hidden="true"></i></a></div>
+                <div class="text">
+                    <h3>Email Id</h3>
+                    <p>
+                       <a class="contactLink" href="mailto:richashah962@gmail.com" title="Email me">richashah962@gmail.com</a>
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><a class="contactLink icon_link" href="tel:9892997943" title="Call Me"><i class="fa fa-phone" aria-hidden="true"></i></a></div>
+                <div class="text">
+                    <h3>Phone</h3>
+                    <p>
+                       <a class="contactLink" href="tel:9892997943" title="Call Me">+91 9892997943</a><br>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="contactForm">
+            <form action="">
+                <h2>Send Message</h2>
+                <div class="inputBox">
+                    <input type="text" name="" required="required">
+                    <span>Full Name</span>
+                    <div class="inputBox">
+                        <input type="email" name="" required="required">
+                        <span>Email Id</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="tel" name="" required="required">
+                        <span>Contact No.</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required"></textarea>
+                        <span>Message</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="Send">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</section>      
+<footer>
+    <!-- Made with <i class="fas fa-heart"></i> by Richa Shah -->
+    <section class="Contact_Me" id="#contact">
+    <ul class="social_list">
+        <li class="social_list__item"><a class="social_list__link" target="_blank" href="https://www.instagram.com/richa_shah962"><i class="fab fa-instagram fa-2x" aria-hidden="true"></i></a></li>
+        <li class="social_list__item"><a class="social_list__link" target="_blank" href="https://github.com/richashah962"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a></li>
+        <li class="social_list__item"><a class="social_list__link" target="_blank" href="https://github.com/richashah962"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+        <li class="social_list__item"><a class="social_list__link" target="_blank" href="https://github.com/richashah962"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i> </a></li>
+        
+        <li class="social_list__item"><a class="social_list__link" target="_blank" href="https://api.whatsapp.com/send?phone=919892997943&amp;text=Hey!"><i class="fab fa-whatsapp fa-2x" aria-hidden="true"></i> </a></li>
+    </ul>
+    <p class="copyright">&copy copyright.All rights reserved.</p>
+    </section>
+</footer>    
+    
+    
+</body>
+</html>
+
+<!-- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins',sans-serif; 
+}
+.contact{
+    position:relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(https://www.ljroseaccounting.co.uk/wp-content/uploads/2016/09/office-background.jpg);
+    /* opacity: 90%; */
+    background-size: cover;
+}
+.contact .content{
+    max-width:800px;
+    text-align: center;
+}
+.contact .content h2{
+    font-size:2.5em ;
+    font-weight:500 ;
+    color:#00bcd4 ;
+}
+.contact .content p{
+    font-size:1em ;
+    
+    color:#fff ;
+}
+.container_box{
+    width: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:20px ;
+}
+.container_box .contactInfo{
+    width: 50%;
+    display:flex;
+    flex-direction: column;
+}
+.container_box .contactInfo .box{
+    position:relative;
+    padding:20px 0;
+    display: flex;
+}
+.container_box .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: rgb(199, 192, 192,0.8);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+    border: 1px solid #fff;
+}
+.icon:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.39), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+}
+.container_box .contactInfo .box .text{
+    display:flex;
+    margin-left: 20px;
+    font-size:16px ;
+    color:#fff;
+    flex-direction: column;
+    font-weight: 200;
+}
+.container_box .contactInfo .box .text h3{
+    font-size: 1.5em;
+    font-weight: 500;
+    color:#00bcd4;
+} 
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background:rgb(199, 192, 192);
+
+}
+.contactForm h2{
+   font-size: 30px; 
+   color:rgb(34, 32, 32);
+   font-weight: 500;
+}
+.contactForm .inputBox{
+    position:relative ;
+    width: 100%;
+    margin-top:10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+    width:100%;
+    padding: 5px 0;
+    font-size:16px ;
+    margin: 10px 0;
+    border:none;
+    border-bottom:2px solid #333;
+    outline:none;
+    resize:none;
+}
+.contactForm .inputBox span{
+    position:absolute;
+    left:0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin:10px 0;
+    pointer-events:none;
+    transition: 0.5s;
+    color:#00bcd4;
+
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+    color:#666;
+    font-size: 15px;
+    transform:translateY(-30px) ;
+}
+.contactLink{
+    text-decoration: none;
+    color:#fff;
+}
+.contactLink:hover{
+    font-weight: 500;
+    font-size:1.2em;
+}
+.contactForm .inputBox input[type="submit"]{
+    width:100px;
+    background: #023e46;
+    color:#fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size:20px ;
+    margin-top: 4%;
+}
+.contactForm .inputBox input[type="submit"]:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.39), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+}
+.icon_link{
+    color: #000;
+}
+
+footer{
+    background-color:rgb(218, 218, 218) ;
+    font-size: 1em;
+    text-align: center;
+    
+}
+
+  .social_list{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+   
+
+  }
+  .social_list a{
+    
+    color: #000;
+    font-size: 0.6em;
+    margin: 5px 10px;
+    margin-top: 15px;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.5s;
+    border: 1px solid rgb(255, 251, 251);
+    border-radius: 50%;
+    background-color: rgb(177, 175, 175);
+    
+  }
+  .social_list a:link,.social_list a:visited{
+    color: #000;
+  }
+  .social_list a:hover{
+    background-color: #023e46;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.39), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+    font-size: 0.8em;
+  }
+  p.copyright{
+    color:#023e46;
+    font-size:1em;
+  }
+  @media(max-width:450px){
+    
+    .social_list{
+      flex-direction: column;
+    }
+  }
+
+@media(max-width:991px)
+{
+    .contact{
+        padding: 50px;
+
+    }
+    .container{
+        flex-direction: column;
+    }
+    .container .contactInfo{
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    .contactForm{
+        width:100%;
+    }
+} -->
